@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interstellar Movie</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #111;
+            padding: 20px;
+            border: 2px solid #444;
+            border-radius: 10px;
+        }
+        
+        .student-info {
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .student-names {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .student {
+            background-color: #222;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+        
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        
+        h2 {
+            color: #4CAF50;
+            border-bottom: 1px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        
+        .movie-poster {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            border: 3px solid #4CAF50;
+            border-radius: 5px;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+            margin: 10px 0;
+            color: #CCC;
+        }
+        
+        .info-box {
+            background-color: #222;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #45a049;
+        }
+        
+        .showtimes, .streaming, .reviews, .synopsis, .cast {
+            margin: 20px 0;
+        }
+        
+        .cinema, .service, .review {
+            background-color: #222;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .stars {
+            color: gold;
+            font-size: 20px;
+        }
+        
+        .quote {
+            font-style: italic;
+            background-color: #333;
+            padding: 10px;
+            border-left: 3px solid #4CAF50;
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #222;
+        }
+        
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #333;
+            color: #4CAF50;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            border-top: 2px solid #4CAF50;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        
+        .footer-section h3 {
+            color: #4CAF50;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: #4CAF50;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .share-button {
+            background-color: #333;
+            color: white;
+            border: 1px solid #444;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .share-button:hover {
+            background-color: #4CAF50;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Student Information Section -->
+        <div class="student-info">
+            <h3>Created by:</h3>
+            <div class="student-names">
+                <div class="student">u24680941 - Oratile Masuku</div>
+                <div class="student">u25539800 - Bathini Mbondi</div>
+                <div class="student">u25639987 - Tjhadika Moloja</div>
+                <div class="student">u25506227 - Andrew Thabang Modiba</div>
+            </div>
+        </div>
+        
+        <h1>INTERSTELLAR</h1>
+        
+        <img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg" alt="Interstellar Movie Poster" class="movie-poster">
+        
+        <p class="tagline">"Mankind was born on Earth. It was never meant to die here."</p>
+        
+        <div class="info-box">
+            <p><strong>Released:</strong> November 7, 2014</p>
+            <p><strong>Director:</strong> Christopher Nolan</p>
+            <p><strong>Rating:</strong> PG-13</p>
+            <p><strong>Runtime:</strong> 2h 49m</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="#" class="button">Buy Tickets</a>
+            <a href="#" class="button">Stream Now</a>
+        </div>
+        
+        <!-- Synopsis Section -->
+        <div class="synopsis">
+            <h2>Synopsis / Description</h2>
+            
+            <h3>Plot Summary</h3>
+            <p>In the near future, Earth is becoming uninhabitable due to crop blights and dust storms. Former NASA pilot Cooper is tasked with piloting a spacecraft through a wormhole near Saturn in search of a new home for humanity. The mission takes the crew to distant planets where they encounter extreme environments and time dilation effects that challenge their mission and personal relationships.</p>
+            
+            <h3>Movie Details</h3>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Genre</td>
+                    <td>Science Fiction, Adventure, Drama</td>
+                </tr>
+                <tr>
+                    <td>Tone</td>
+                    <td>Epic, Thought-provoking, Emotional</td>
+                </tr>
+                <tr>
+                    <td>Themes</td>
+                    <td>Love, Survival, Time, Exploration, Human Spirit</td>
+                </tr>
+                <tr>
+                    <td>Setting</td>
+                    <td>Near-future Earth, Space, Distant Planets</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Cast & Crew Section -->
+        <div class="cast">
+            <h2>Cast & Crew</h2>
+            
+            <h3>Key Crew Members</h3>
+            <ul>
+                <li><strong>Director:</strong> Christopher Nolan</li>
+                <li><strong>Producers:</strong>
+                    <ul>
+                        <li>Emma Thomas</li>
+                        <li>Christopher Nolan</li>
+                        <li>Lynda Obst</li>
+                    </ul>
+                </li>
+                <li><strong>Writers:</strong>
+                    <ul>
+                        <li>Jonathan Nolan</li>
+                        <li>Christopher Nolan</li>
+                    </ul>
+                </li>
+                <li><strong>Music Composer:</strong> Hans Zimmer</li>
+                <li><strong>Cinematographer:</strong> Hoyte van Hoytema</li>
+            </ul>
+            
+            <h3>Main Cast</h3>
+            <ol>
+                <li><strong>Matthew McConaughey</strong> as Cooper</li>
+                <li><strong>Anne Hathaway</strong> as Dr. Amelia Brand</li>
+                <li><strong>Jessica Chastain</strong> as Murph (adult)</li>
+                <li><strong>Michael Caine</strong> as Professor Brand</li>
+                <li><strong>Matt Damon</strong> as Dr. Mann</li>
+                <li><strong>Casey Affleck</strong> as Tom Cooper</li>
+                <li><strong>Mackenzie Foy</strong> as Murph (10 years old)</li>
+                <li><strong>John Lithgow</strong> as Donald</li>
+                <li><strong>Topher Grace</strong> as Getty</li>
+                <li><strong>Ellen Burstyn</strong> as Murph (elderly)</li>
+            </ol>
+        </div>
+        
+        <div class="showtimes">
+            <h2>Showtimes</h2>
+            <div class="cinema">
+                <h3>AMC Theater</h3>
+                <p>Times: 1:00 PM, 4:30 PM, 8:00 PM, 10:45 PM</p>
+                <a href="#" class="button">Book Now</a>
+            </div>
+            <div class="cinema">
+                <h3>Regal Cinema</h3>
+                <p>Times: 12:15 PM, 3:45 PM, 7:15 PM, 10:30 PM</p>
+                <a href="#" class="button">Book Now</a>
+            </div>
+        </div>
+        
+        <div class="streaming">
+            <h2>Streaming Options</h2>
+            <div class="service">
+                <h3>Amazon Prime Video</h3>
+                <p>Rent: $3.99 | Buy: $14.99</p>
+                <a href="#" class="button">Watch Now</a>
+            </div>
+            <div class="service">
+                <h3>YouTube Movies</h3>
+                <p>Rent: $3.99 | Buy: $14.99</p>
+                <a href="#" class="button">Watch Now</a>
+            </div>
+            <div class="service">
+                <h3>Apple TV</h3>
+                <p>Rent: $3.99 | Buy: $14.99</p>
+                <a href="#" class="button">Watch Now</a>
+            </div>
+        </div>
+        
+        <div class="reviews">
+            <h2>Reviews & Ratings</h2>
+            
+            <div class="info-box">
+                <p><strong>IMDb:</strong> 8.6/10 <span class="stars"></span></p>
+                <p><strong>Rotten Tomatoes:</strong> 72% <span class="stars"></span></p>
+                <p><strong>Audience Score:</strong> 86% <span class="stars"></span></p>
+            </div>
+            
+            <h3>Critic Reviews</h3>
+            <div class="quote">
+                "A visually spectacular, emotionally resonant sci-fi epic that explores love across dimensions of space and time."
+                <br>- The New York Times
+            </div>
+            
+            <div class="quote">
+                "Nolan's most ambitious film to date, blending hard science with profound human emotion."
+                <br>- Rolling Stone
+            </div>
+            
+            <h3>User Reviews</h3>
+            <div class="review">
+                <p><span class="stars"></span> Best movie ever! The black hole scene was amazing!</p>
+                <p>- MovieFan123</p>
+            </div>
+            
+            <div class="review">
+                <p><span class="stars"></span> Really good but a bit confusing at times. Great visuals though!</p>
+                <p>- SpaceLover99</p>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Production Companies</h3>
+                    <ul>
+                        <li>Paramount Pictures</li>
+                        <li>Warner Bros. Pictures</li>
+                        <li>Legendary Pictures</li>
+                        <li>Syncopy Films</li>
+                        <li>Lynda Obst Productions</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal Information</h3>
+                    <ul>
+                        <li>Rated: PG-13</li>
+                        <li>Copyright � 2014</li>
+                        <li>All Rights Reserved</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Use</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    
+                    <h3>Share This Page</h3>
+                    <div class="share-buttons">
+                        <button class="share-button">Facebook</button>
+                        <button class="share-button">Twitter</button>
+                        <button class="share-button">Email</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Interstellar � 2014 Paramount Pictures | Warner Bros. Pictures. All rights reserved.</p>
+                <p>This site is for educational purposes only. All movie content is property of their respective owners.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple button click effects
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('This would take you to the booking/streaming page!');
+            });
+        });
+        
+        // Share button functionality
+        document.querySelectorAll('.share-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const platform = this.textContent;
+                alert(`Sharing Interstellar page on ${platform}!`);
+            });
+        });
+        
+        // Social media link effects
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault();
+                const platform = this.querySelector('i').className.split('-')[1];
+                alert(`Visiting our ${platform} page!`);
+            });
+        });
+    </script>
+</body>
+</html>
